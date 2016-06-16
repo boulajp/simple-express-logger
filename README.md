@@ -2,10 +2,9 @@
 An express logging middleware
 
 #Description
-Prints to console whenever express picks up an express to the port its listening to.
-NOTE: Since this will log any request going through the port, its important to note that this doesn't mean that there is a route handler for this endpoint.
- 
-Logged message looks similar to this: `Request: {GET} /api/foo`
+Logs requests to the console in a format like this: `Request: {GET} /api/foo`
+
+NOTE: This simply logs every request coming into the server, not just routes which have been handled in express
 
 #Usage
 Simply require the module, and use it as middleware
