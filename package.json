@@ -1,6 +1,6 @@
 {
   "name": "simple-express-logger",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Express logging middleware which prints a string similar to this for each route hit: \"Endpoint hit: {GET} /api/foo\"",
   "main": "index.js",
   "scripts": {
