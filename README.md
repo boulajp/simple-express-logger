@@ -9,10 +9,12 @@ Logged message looks similar to this: `Request: {GET} /api/foo`
 
 #Usage
 Simply require the module, and use it as middleware
-`var express = require('express');
+`
+var express = require('express');
 var logger = require('simple-express-logger');
 
 var app = express();
-app.use(logger);`
+app.use(logger);
+`
 
 
