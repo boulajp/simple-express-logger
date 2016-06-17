@@ -8,6 +8,7 @@ NOTE: This simply logs every request coming into the server, not just routes whi
 
 #Usage
 1. Install from npm
+
 `npm install simple-express-logger`
 2. Require the module, and use it as middleware
 ```javascript
