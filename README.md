@@ -4,7 +4,7 @@ An express logging middleware
 #Description
 Logs requests to the console in a format like this: `Request: {GET} /api/foo`
 
-NOTE: This simply logs every request coming into the server, not just requests which have been handled in express
+NOTE: This simply logs every request coming into the server, not just requests who's routes have been handled in express
 
 #Usage
 1. Install via npm: ```npm install simple-express-logger```
