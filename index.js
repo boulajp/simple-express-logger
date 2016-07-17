@@ -3,10 +3,10 @@ function loggerFactory(options) {
 
 	return function logger(req, res, next) {
 		logMainStatement(req, loggingFunction);
-    if (options && options.extraFields)
-    	logExtraFields(req, loggingFunction, options.extraFields);
+		if (options && options.extraFields)
+			logExtraFields(req, loggingFunction, options.extraFields);
 		next();
-	}
+	};
 }
 
 function logMainStatement(req, loggingFunction) {
@@ -15,11 +15,12 @@ function logMainStatement(req, loggingFunction) {
 
 function logExtraFields(req, loggingFunction, extraFields) {
 	extraFields.map(function(fieldName) {
-  	if (req[fieldName]) {
-      var field = typeof req[fieldName] == 'object' ? JSON.stringify(req[fieldName]) : req[fieldName];
-    }
-    	console.log(fieldName + ': ' + field);
-  });
+		if (req[fieldName]) {
+			var field = typeof req[fieldName] == 'object' ? JSON.stringify(req[fieldName]) : req[fieldName];
+			console.log(fieldName + ': ' + field);
+			
+		}
+	});
 }
 
 module.exports = loggerFactory;

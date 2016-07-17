@@ -1,6 +1,4 @@
-# simple-express-logger
-An express logging middleware
-
+# simple-express-logger [![Build Status](https://travis-ci.org/boulajp/simple-express-logger.svg?branch=master)](https://travis-ci.org/boulajp/simple-express-logger.svg?branch=master)
 #Description
 Logs requests to the console in a format like this: `Request: {GET} /api/foo`
 
