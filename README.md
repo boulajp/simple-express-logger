@@ -15,9 +15,12 @@ var app = express();
 app.use(logger());
 ```
 
+Checkout the API section for information about customization through an optional ```options``` object
+
 ## API
 **```logger([options])```**
 
-&nbsp;&nbsp;&nbsp;&nbsp;* ```options``` `<Object`> Set of configurable options. Can have the following fields:
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*```customOutput``` `<Function>` Function used in place of ```console.log```. Useful for externally redirecting the output.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*```extraFields``` `<Array String>` Set of field names on the ```req``` `<Object>` to also be logged. For example, an ```options``` object of ```{ extraFields: [ 'headers' ] }``` will log somthing similar to the following line: ```headers: "{ "foo": 1, "bar": 2 }"```
+- ```options``` `<Object`> Set of configurable options. Can have the following fields:
+
+  - ```customOutput``` `<Function>` Function used in place of ```console.log```. Useful for externally redirecting the output.
+  - ```extraFields``` `<Array String>` Set of field names on the ```req``` `<Object>` to also be logged. For example, an ```options``` object of ```{ extraFields: [ 'headers' ] }``` will log somthing similar to the following line: ```headers: "{ "foo": 1, "bar": 2 }"```
