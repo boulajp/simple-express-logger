@@ -1,5 +1,5 @@
 function loggerFactory(options) {
-	var loggingFunction = (options && options.logger) ? options.logger : console.log.bind(console);
+	var loggingFunction = (options && options.customOutput) ? options.customOutput : console.log.bind(console);
 
 	return function logger(req, res, next) {
 		logMainStatement(req, loggingFunction);
