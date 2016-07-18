@@ -4,7 +4,9 @@
   "description": "Simple express logging middleware",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/jshint/bin/jshint index.js"
+    "test": "npm run lint && npm run unit-test",
+    "lint": "./node_modules/jshint/bin/jshint index.js",
+    "unit-test": "./node_modules/jasmine/bin/jasmine.js tests.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/boulajp/simple-express-logger#readme",
   "devDependencies": {
+    "jasmine": "^2.4.1",
     "jshint": "^2.9.2"
   }
 }
