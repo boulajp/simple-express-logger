@@ -6,7 +6,7 @@ NOTE: This simply logs every request coming into the server, not just requests w
 
 ##Usage
 1. Install via npm: ```$ npm install --save simple-express-logger```
-2. Import the module, and use it as middleware
+2. Import and instantiate the module, then use it as middleware
 ```javascript
 var express = require('express');
 var logger = require('simple-express-logger');
