@@ -27,7 +27,7 @@ function throwErrorsIfNecessary(req, options) {
 	if (options && options.extraFields) {
 		options.extraFields.forEach(function(field) {
 			if (!req[field])
-				throw new Error('The field `xhr` does not exist on the request object');
+				throw new Error('The field `' + field + '` does not exist on the request object');
 		});
 	}
 }
