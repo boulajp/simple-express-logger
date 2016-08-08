@@ -1,6 +1,6 @@
 # simple-express-logger [![Build Status](https://travis-ci.org/boulajp/simple-express-logger.svg?branch=master)](https://travis-ci.org/boulajp/simple-express-logger.svg?branch=master)
 ##Description
-Logs requests to the console in a format like this: `Request: {GET} /api/foo`
+Logs requests to the console in the following format: `Request: {GET} /api/foo`
 
 NOTE: This simply logs every request coming into the server, not just requests who's routes have been handled in express
 
