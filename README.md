@@ -1,10 +1,10 @@
 # simple-express-logger [![Build Status](https://travis-ci.org/boulajp/simple-express-logger.svg?branch=master)](https://travis-ci.org/boulajp/simple-express-logger.svg?branch=master)
-##Description
+## Description
 Logs requests to the console in the following format: `Request: {GET} /api/foo`
 
 NOTE: This simply logs every request coming into the server, not just requests who's routes have been handled in express
 
-##Usage
+## Usage
 1. Install via npm: ```$ npm install --save simple-express-logger```
 2. Import and instantiate the module, then use it as middleware
 ```javascript
