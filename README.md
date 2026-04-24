@@ -1,26 +1,34 @@
-# simple-express-logger [![Build Status](https://travis-ci.org/boulajp/simple-express-logger.svg?branch=master)](https://travis-ci.org/boulajp/simple-express-logger.svg?branch=master)
-## Description
-Logs requests to the console in the following format: `Request: {GET} /api/foo`
+# simple-express-logger [![CI](https://github.com/boulajp/simple-express-logger/actions/workflows/ci.yml/badge.svg)](https://github.com/boulajp/simple-express-logger/actions/workflows/ci.yml) [![npm version](https://img.shields.io/npm/v/simple-express-logger)](https://www.npmjs.com/package/simple-express-logger) [![npm downloads](https://img.shields.io/npm/dw/simple-express-logger)](https://www.npmjs.com/package/simple-express-logger)
 
-NOTE: This simply logs every request coming into the server, not just requests who's routes have been handled in express
+Simple Express logging middleware. Logs every incoming request to the console:
+
+```
+REQUEST: {GET} /api/foo
+```
+
+> **Note:** This logs all requests entering the server, not just matched Express routes.
+
+## Installation
+
+```sh
+npm install simple-express-logger
+```
 
 ## Usage
-1. Install via npm: ```$ npm install --save simple-express-logger```
-2. Import and instantiate the module, then use it as middleware
-```javascript
-var express = require('express');
-var logger = require('simple-express-logger');
 
-var app = express();
+```javascript
+const express = require('express');
+const logger = require('simple-express-logger');
+
+const app = express();
 app.use(logger());
 ```
 
-Checkout the API section for information about customization through an optional ```options``` object
-
 ## API
-**```logger([options])```**
 
-- ```options``` `<Object`> Set of configurable options. Can have the following fields:
+**`logger([options])`**
 
-  - ```customOutput``` `<Function>` Function used in place of ```console.log```. Useful for externally redirecting the output.
-  - ```extraFields``` `<Array String>` Set of field names on the ```req``` `<Object>` to also be logged. For example, an ```options``` object of ```{ extraFields: [ 'headers' ] }``` will log somthing similar to the following line: ```headers: "{ "foo": 1, "bar": 2 }"```
+| Option | Type | Description |
+|--------|------|-------------|
+| `customOutput` | `Function` | Replaces `console.log`. Useful for piping output to an external logger. |
+| `extraFields` | `String[]` | Names of additional fields on `req` to log. Example: `{ extraFields: ['headers'] }` logs `headers: {"foo":1,"bar":2}` |
